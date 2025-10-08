@@ -1,34 +1,54 @@
-<h1>LISTADO DE PRODUCTOS</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Listado de Productos</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
 
-<table border="1" style="width: 100%; border-collapse: collapse;">
-  <tr style="background-color: #f2f2f2;">
-    <th>Producto</th>
-    <th>Precio</th>
-    <th>Categoría</th>
-  </tr>
-  <tr>
-    <td>Corn Flakes</td>
-    <td>$4.50</td>
-    <td>Cereales</td>
-  </tr>
-  <tr>
-    <td>Jabón Líquido</td>
-    <td>$2.80</td>
-    <td>Higiene</td>
-  </tr>
-  <tr>
-    <td>Smartphone</td>
-    <td>$299.99</td>
-    <td>Tecnológicos</td>
-  </tr>
-  <tr>
-    <td>Avena Instantánea</td>
-    <td>$3.20</td>
-    <td>Cereales</td>
-  </tr>
-  <tr>
-    <td>Shampoo</td>
-    <td>$5.50</td>
-    <td>Higiene</td>
-  </tr>
+  <h1>Listado de Productos</h1>
 
+  <button class="btn-agregar" id="openModal">+ Agregar Producto</button>
+
+  <table id="tablaProductos">
+    <tr>
+      <th>Producto</th>
+      <th>Precio</th>
+      <th>Categoría</th>
+    </tr>
+    <tr>
+      <td>Corn Flakes</td>
+      <td>$4.50</td>
+      <td>Cereales</td>
+    </tr>
+    <tr>
+      <td>Jabón Líquido</td>
+      <td>$2.80</td>
+      <td>Higiene</td>
+    </tr>
+    <tr>
+      <td>Smartphone</td>
+      <td>$299.99</td>
+      <td>Tecnológicos</td>
+    </tr>
+  </table>
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Agregar Producto</h2>
+      <input type="text" id="producto" placeholder="Nombre del producto">
+      <input type="number" id="precio" placeholder="Precio (en $)">
+      <select id="categoria">
+        <option value="">Seleccione categoría</option>
+        <option value="Cereales">Cereales</option>
+        <option value="Higiene">Higiene</option>
+        <option value="Tecnológicos">Tecnológicos</option>
+      </select>
+      <button id="guardarProducto">Guardar</button>
+    </div>
+  </div>
+  <script src="../js/script.js"></script>
+</body>
+</html>
